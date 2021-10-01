@@ -77,18 +77,19 @@ Congratulations you have completed the base setup of a labs vm!
 
 There are two options to configure Docker support. WSL2 recommended
 
-### Option 1 - Install Docker with Hyper-V
+### Option 1 - Install Docker with Hyper-V (Skip for now)
 
 Install Hyper-V using `setup-docker.ps1` and restart after execution.
 
 
 ---
 
-### Option 2 - Install Docker with WSL2
+### Option 2 - Install Docker with WSL2 (Use Today)
 
 #### <a id="wsl">Install WSL2</a>
 
-Execute script `setup-wsl2.ps1` multible times to setup WSL2. Reboot between first and second run.
+Execute script `setup-wsl2.ps1` multible times to setup WSL2. 
+Reboot between first and second run.
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force;
