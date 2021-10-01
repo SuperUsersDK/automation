@@ -102,13 +102,20 @@ First Run:
 Second Run:
 
 
-After the second run your selected linux distro will be opened an you can set your username:
+After the second run your selected linux distro (select "1" for "Ubuntu 20.04") will be opened an you can set your username:sysadmin and password
 
 > Note: You can take the same credentials just like on the Windows VM
 
 ```
-user=sysadmin
-pwd=********
+Select: 
+1 : Ubuntu 20.04 
+2 : Ubuntu 18.04
+3 : Ubuntu 16.04
+4 : Debian
+5 : Kali
+6 : OpenSUSE Leap 42
+7 : SUSE Linux Enterprise Server 1
+8 : Alpine
 ```
 
 
@@ -116,7 +123,7 @@ pwd=********
 
 ### Test Docker Installation
 
-In the console window execute:
+In "Windows PowerShell" Terminal test docker command
 
 ```
 docker run hello-world
