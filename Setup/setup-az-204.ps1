@@ -14,11 +14,6 @@ choco install vscode -y
 choco install git -y
 choco install gitextensions -y
 
-Write-Host "*****" -ForegroundColor red
-Write-Host "You can now clone your fork to c:\automation using git clone REPO-URL" -ForegroundColor red
-Write-Host "git clone https://github.com/Student01/automation/" -ForegroundColor yellow
-Write-Host "*****" -ForegroundColor red
-
 # Install Software
 Write-Host "Refresh Path Env - 3/6" -ForegroundColor yellow
 
