@@ -1,26 +1,41 @@
+
+Write-Host "Installing scoop (PowerShell Package Manager)" -ForegroundColor yellow
+
+# Install scoop (powershell package manager)
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+
+scoop install 7zip 
+scoop install git 
+scoop install sudo 
+scoop install touch
+scoop install azure-cli 
+
+# Add GUI Tools
+scoop bucket add extras
+scoop install googlechrome 
+scoop install vscode
+scoop install win32-openssh 
+scoop install pwsh
+scoop install concfg 
+scoop install gow 
+scoop install vim 
+scoop install starship
+scoop install windows-terminal
+
+
 # Install chocolatey
-Write-Host "Installing Chocolatey - 1/6" -ForegroundColor yellow
+Write-Host "Installing Chocolatey (Windows Package Manager)" -ForegroundColor yellow
 
 Set-ExecutionPolicy Bypass -Scope Process -Force; 
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; 
 Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
-# Install Git Related Software
-Write-Host "Installing VSCode & Git Related Software" -ForegroundColor yellow
 Write-Host "Refresh Path Env - 2/6" -ForegroundColor yellow
 
-choco install googlechrome -y
-choco install vscode -y
-choco install git -y
 choco install gitextensions -y
-
-# Install Software
-Write-Host "Refresh Path Env - 3/6" -ForegroundColor yellow
-
 choco install dotnetcore-sdk -y
 choco install dotnet-5.0-sdk -y
 choco install nodejs-lts --version=12.18.4 -y
-choco install azure-cli -y
 choco install azure-functions-core-tools-3 --params="'/x64:true'" -y
 choco install azurestorageemulator -y
 choco install azurepowershell -y
@@ -30,8 +45,6 @@ choco install postman -y
 choco install ngrok -y
 
 # Refresh Path Env
-Write-Host "Refresh Path Env - 4/6" -ForegroundColor yellow
-
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 
 # Install httprepl
@@ -39,7 +52,7 @@ dotnet tool install -g Microsoft.dotnet-httprepl
 dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
 
 # Intall VS Code Extensions
-Write-Host "VS Code Extensions - 5/6" -ForegroundColor yellow
+Write-Host "VS Code Extensions" -ForegroundColor yellow
 
 code --install-extension ms-dotnettools.csharp
 code --install-extension ms-vscode.powershell
@@ -60,10 +73,15 @@ code --install-extension mhutchie.git-graph
 code --install-extension humao.rest-client
 
 # Install Angular
-Write-Host "Installing Angular - 6/6" -ForegroundColor yellow
+Write-Host "Installing Angular " -ForegroundColor yellow
 
 npx @angular/cli@latest analytics off
-npm i -g @angular/cli
+npm install  @angular/cli --global
 
-# Finished Msg
+
+Write-Host "Installing NPM tools " -ForegroundColor yellow
+npm install fkill-cli kill-tabs rimraf empty-trash-cli pen speed-test live-server http-server is-online-cli is-up-cli clipboard-cli --global
+
+
+
 Write-Host "Finished Software installation" -ForegroundColor yellow
