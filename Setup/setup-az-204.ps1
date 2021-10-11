@@ -6,10 +6,14 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 scoop install 7zip 
 scoop install git 
+scoop install gitignore
 scoop install sudo 
 scoop install touch
 scoop install azure-cli 
 scoop install python
+
+# install http, because curl is not for humans
+pip install httpie
 
 # Add GUI Tools
 scoop bucket add extras
@@ -22,10 +26,6 @@ scoop install gow
 scoop install vim 
 scoop install starship
 scoop install windows-terminal
-
-# install http
-pip install httpie
-
 
 
 # Install chocolatey
