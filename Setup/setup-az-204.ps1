@@ -9,6 +9,7 @@ scoop install git
 scoop install sudo 
 scoop install touch
 scoop install azure-cli 
+scoop install python
 
 # Add GUI Tools
 scoop bucket add extras
@@ -21,6 +22,10 @@ scoop install gow
 scoop install vim 
 scoop install starship
 scoop install windows-terminal
+
+# install http
+pip install httpie
+
 
 
 # Install chocolatey
