@@ -1,4 +1,6 @@
 
+Write-Host "Automation Setup for Developing Solutions for Microsoft Azure --> https://www.superusers.dk/kursus/az0204/ "
+
 Write-Host "Installing scoop (PowerShell Package Manager)" -ForegroundColor yellow
 
 # Install scoop (powershell package manager)
